@@ -26,43 +26,6 @@ Loaction: Address of the employees.
 Job_history: History of the employees.
 Jobs: Job and salary details of the employees.
 Region : The Field where the employees working.
- 
-Schema Diagram:
-
-+-------------------+       +-------------------+       +-------------------+
-|    Employees      |       |   Departments     |       |    Locations      |
-+-------------------+       +-------------------+       +-------------------+
-| employee_id (PK)  |       | department_id (PK)|       | location_id (PK)  |
-| first_name        |       | department_name   |       | street_address    |
-| last_name         |       | manager_id        |       | postal_code       |
-| email             |       | location_id (FK)  |       | city              |
-| phone_number      |       +-------------------+       | state_province    |
-| hire_date         |                                   | country_id (FK)   |
-| job_id (FK)       |                                   +-------------------+
-| salary            |                                   +-------------------+
-| commission_pct    |                                   |    Countries      |
-| manager_id (FK)   |                                   +-------------------+
-| department_id (FK)|                                   | country_id (PK)   |
-+-------------------+                                   | country_name      |
-                                                        | region_id (FK)    |
-+-------------------+                                   +-------------------+
-|    Job_History    |                                   +-------------------+
-+-------------------+                                   |     Regions       |
-| employee_id (FK)  |                                   +-------------------+
-| start_date (PK)   |                                   | region_id (PK)    |
-| end_date          |                                   | region_name       |
-| job_id (FK)       |                                   +-------------------+
-| department_id (FK)|                                                   
-+-------------------+
-                                                                            
-+-------------------+
-|       Jobs        |
-+-------------------+
-| job_id (PK)       |
-| job_title         |
-| min_salary        |
-| max_salary        |
-+-------------------+
 
 Setup and Installation:
 
